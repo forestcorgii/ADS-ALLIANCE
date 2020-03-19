@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C731876-0444-4C1D-A21C-3EBA5AC2171F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ENTRY.My.MyApplication</StartupObject>
+    <RootNamespace>ENTRY</RootNamespace>
+    <AssemblyName>ALLIANCE-ENTRY-NETv2</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>DDC LOGO_RED.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\EXE\</OutputPath>
+    <DocumentationFile>ALLIANCE-ENTRY-NETv2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ALLIANCE-ENTRY-NETv2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageViewer, Version=1.0.6055.228, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\ImageViewer\ImageViewer\ImageViewer\bin\Release\ImageViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="ModifiedComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\PROGRAMS\ModifiedComponents\ModifiedComponents\bin\Release\ModifiedComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialog\frmLogIn.designer.vb">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\frmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\Info.Designer.vb">
+      <DependentUpon>Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENTRY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ENTRY.Designer.vb">
+      <DependentUpon>ENTRY.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\fieldInfoEditor.designer.vb">
+      <DependentUpon>fieldInfoEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\fieldInfoEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message Boxes\MessagePrompt.Designer.vb">
+      <DependentUpon>MessagePrompt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Message Boxes\MessagePrompt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Back-end\KIMode.vb" />
+    <Compile Include="Modules\Back-end\Modes.vb" />
+    <Compile Include="Modules\Back-end\TickMode.vb" />
+    <Compile Include="Modules\Front-end\Function.vb" />
+    <Compile Include="Modules\Back-end\MDB.vb" />
+    <Compile Include="Modules\Front-end\Lookup.vb" />
+    <Compile Include="Modules\Front-end\Process.vb" />
+    <Compile Include="Modules\Back-end\Properties.vb" />
+    <Compile Include="Modules\Back-end\Settings.vb" />
+    <Compile Include="Modules\Front-end\Validation.vb" />
+    <Compile Include="Modules\Back-end\Variables.vb" />
+    <Compile Include="Message Boxes\MsgBoxProcess.vb" />
+    <Compile Include="Message Boxes\msg_in.Designer.vb">
+      <DependentUpon>msg_in.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Message Boxes\msg_in.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message Boxes\msg_out.designer.vb">
+      <DependentUpon>msg_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Message Boxes\msg_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\frmLogIn.resx">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\Info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ENTRY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ENTRY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\fieldInfoEditor.resx">
+      <DependentUpon>fieldInfoEditor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message Boxes\MessagePrompt.resx">
+      <DependentUpon>MessagePrompt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message Boxes\msg_in.resx">
+      <DependentUpon>msg_in.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message Boxes\msg_out.resx">
+      <DependentUpon>msg_out.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDC LOGO_RED.ico" />
+    <Content Include="Resources\404.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
